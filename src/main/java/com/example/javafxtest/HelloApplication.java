@@ -2,6 +2,7 @@ package com.example.javafxtest;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
@@ -34,12 +35,17 @@ public class HelloApplication extends Application {
         tabStackPane.setContent(stackPane);
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         HBox hBox = new HBox();
+        hBox.setSpacing(10);
+        hBox.setPadding(new Insets(20));
         Button A = new Button("A");
         Button B = new Button("B");
         Button C = new Button("C");
+        hBox.getChildren().addAll(A,B,C);
+        Tab tabHBox = new Tab("HBox");
+        tabHBox.setContent(hBox);
 
 
-        tabMother.getTabs().addAll(tabPane, tabStackPane);//Añado el TabPane al TabMother para que forme parte de el.
+        tabMother.getTabs().addAll(tabPane, tabStackPane, tabHBox);//Añado todos los Tabs al TabMother para que formen parte de el.
         Scene scene = new Scene(tabMother, 320, 240);
         stage.setTitle("Hello!");
         stage.setScene(scene);
