@@ -59,9 +59,6 @@ public class HelloApplication extends Application {
         Label labelIzquierdaSup = new Label("Cabecera(TOP)");
         borderPane.setTop(labelIzquierdaSup);
 
-        Label labelIzquierdaSup = new Label("Cabecera(TOP)");
-        borderPane.setTop(labelIzquierdaSup);
-
         Button buttonIzquierda = new Button("Izquierda");
         borderPane.setLeft(buttonIzquierda);
 
